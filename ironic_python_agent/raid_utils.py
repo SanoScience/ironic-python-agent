@@ -228,7 +228,7 @@ def create_raid_device(index, logical_disk):
     try:
         if volume_name is None:
            # volume_name = md_device
-            volume_name = md_device.split('/')[-1]  # Użyj tylko nazwy urządzenia, bez ścieżki
+            volume_name = md_device.split('/')[-1]  # <--- ta linijka
         LOG.debug("Creating md device %(dev)s with name %(name)s"
                   "on %(comp)s",
                   {'dev': md_device, 'name': volume_name,
